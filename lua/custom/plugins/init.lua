@@ -5,4 +5,7 @@
 return {
 	require("custom.plugins.harpoon"),
 	require("custom.plugins.autotag"),
+	require("custom.plugins.undotree"),
+	require("custom.plugins.typst-preview"),
+	require("custom.plugins.trouble"),
 }
