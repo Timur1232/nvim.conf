@@ -27,8 +27,8 @@ require 'typst-preview'.setup {
   -- Warning: Be aware that your version might be older than the one
   -- required.
   dependencies_bin = {
-    ['tinymist'] = 'tinymist',
-    ['websocat'] = nil
+    ['tinymist'] = '/home/timur/.local/share/nvim/typst-preview/tinymist-linux-x64',
+    ['websocat'] = '/home/timur/.local/share/nvim/typst-preview/websocat.x86_64-unknown-linux-musl'
   },
 
   -- A list of extra arguments (or nil) to be passed to previewer.
