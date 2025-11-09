@@ -6,6 +6,9 @@ return {
 	require("custom.plugins.harpoon"),
 	require("custom.plugins.autotag"),
 	require("custom.plugins.undotree"),
-	-- require("custom.plugins.typst-preview"),
+	require("custom.plugins.typst-preview"),
 	require("custom.plugins.trouble"),
+	require("custom.plugins.flash"),
+	require("custom.plugins.zen_mode"),
+	require("custom.plugins.lazygit"),
 }

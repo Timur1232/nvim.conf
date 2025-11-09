@@ -1,3 +1,4 @@
+
 -- require 'typst-preview'.setup {
 --   -- Setting this true will enable logging debug information to
 --   -- `vim.fn.stdpath 'data' .. '/typst-preview/log.txt'`
@@ -27,8 +28,8 @@
 --   -- Warning: Be aware that your version might be older than the one
 --   -- required.
 --   dependencies_bin = {
---     ['tinymist'] = '/home/timur/.local/share/nvim/typst-preview/tinymist-linux-x64',
---     ['websocat'] = '/home/timur/.local/share/nvim/typst-preview/websocat.x86_64-unknown-linux-musl'
+--     ['tinymist'] = '/usr/bin/tinymist',
+--     ['websocat'] = 'websocat'
 --   },
 -- 
 --   -- A list of extra arguments (or nil) to be passed to previewer.
