@@ -60,3 +60,6 @@ vim.keymap.set("i", "jj", "<Esc>")
 vim.keymap.set("n", "<A-e>", ":Explore<Enter>")
 
 vim.keymap.set("v", "<leader>p", '"_d<Left>p')
+
+vim.keymap.set("c", "ц", "w")
+vim.keymap.set("c", "й", "q")
