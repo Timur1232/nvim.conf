@@ -63,3 +63,5 @@ vim.keymap.set("v", "<leader>p", '"_d<Left>p')
 
 vim.keymap.set("c", "ц", "w")
 vim.keymap.set("c", "й", "q")
+
+vim.keymap.set("n", "gf", "gF")

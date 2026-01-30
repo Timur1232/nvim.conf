@@ -1,8 +1,11 @@
 return {
   { -- Highlight, edit, and navigate code
     'nvim-treesitter/nvim-treesitter',
+    version = false,
+    lazy = false,
+    branch = "master",
     build = ':TSUpdate',
-    main = 'nvim-treesitter.configs', -- Sets main module to use for opts
+    main = 'nvim-treesitter.config', -- Sets main module to use for opts
     -- [[ Configure Treesitter ]] See `:help nvim-treesitter`
     opts = {
       ensure_installed = { 'bash', 'c', 'diff', 'html', 'lua', 'luadoc', 'markdown', 'markdown_inline', 'query', 'vim', 'vimdoc' },
@@ -26,9 +29,24 @@ return {
   },
   {
     "nvim-treesitter/nvim-treesitter-textobjects",
+    lazy = true,
+    dependencies = { "nvim-treesitter/nvim-treesitter" },
+    config = function()
+      require("nvim-treesitter.configs").setup({
+        textobjects = {
+          select = {
+            enable = true,
+            lookahead = true,
+          },
+        },
+      })
+    end,
   },
   {
-    "nvim-treesitter/nvim-treesitter-context"
+    "nvim-treesitter/nvim-treesitter-context",
+    lazy = true,
+    dependencies = { "nvim-treesitter/nvim-treesitter" },
+    branch = "master",
   },
 }
 -- vim: ts=2 sts=2 sw=2 et

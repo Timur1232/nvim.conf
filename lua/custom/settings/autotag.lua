@@ -1,3 +1,7 @@
+if true then
+    return
+end
+
 require('nvim-ts-autotag').setup({
   opts = {
     -- Defaults
