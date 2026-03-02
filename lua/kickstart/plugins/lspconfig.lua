@@ -227,6 +227,29 @@ return {
 				gopls = {},
 				-- pyright = {},
 				rust_analyzer = {},
+				zls = {
+					settings = {
+						zls = {
+							path = "/usr/local/bin/zig",
+							Zls = {
+								path = "/usr/bin/zls",
+								enableAutofix = true,
+								enable_snippets = true,
+								enable_ast_check_diagnostics = true,
+								enable_autofix = true,
+								enable_import_embedfile_argument_completions = true,
+								warn_style = true,
+								enable_semantic_tokens = true,
+								enable_inlay_hints = true,
+								inlay_hints_hide_redundant_param_names = true,
+								inlay_hints_hide_redundant_param_names_last_token = true,
+								operator_completions = true,
+								include_at_in_builtins = true,
+								max_detail_length = 1048576,
+							},
+						},
+					},
+				},
 
 				-- tinymist = {
 				-- 	settings = {
@@ -274,7 +297,7 @@ return {
 			-- for you, so that they are available from within Neovim.
 			local ensure_installed = vim.tbl_keys(servers or {})
 			vim.list_extend(ensure_installed, {
-				"stylua", -- Used to format Lua code
+				-- "stylua", -- Used to format Lua code
 			})
 			require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
 

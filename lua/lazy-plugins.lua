@@ -24,7 +24,7 @@ require("lazy").setup({
 
 	require("kickstart.plugins.gitsigns"),
 
-	require("kickstart.plugins.which-key"),
+	-- require("kickstart.plugins.which-key"),
 
 	require("kickstart.plugins.telescope"),
 
@@ -35,6 +35,8 @@ require("lazy").setup({
 	require("kickstart.plugins.blink-cmp"),
 
 	require("kickstart.plugins.tokyonight"),
+
+	-- { "ellisonleao/gruvbox.nvim", priority = 1000 , config = true, --[[opts = ...]]},
 
 	require("kickstart.plugins.todo-comments"),
 
@@ -89,8 +91,5 @@ require("lazy").setup({
 		},
 	},
 })
-
--- [[ Plugins settings ]]
-require("custom.settings")
 
 -- vim: ts=2 sts=2 sw=2 et
