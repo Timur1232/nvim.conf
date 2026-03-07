@@ -1,7 +1,7 @@
 return {
 	"Vonr/align.nvim",
 	branch = "v2",
-	lazy = true,
+	lazy = false,
 	config = function()
 		local NS = { noremap = true, silent = true }
 
