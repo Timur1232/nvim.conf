@@ -57,7 +57,7 @@ vim.o.splitbelow = true
 --   See `:help lua-options`
 --   and `:help lua-options-guide`
 vim.o.list = true
-vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
+vim.opt.listchars = { tab = "> ", trail = "·", nbsp = "␣" }
 
 -- Preview substitutions live, as you type!
 vim.o.inccommand = "split"
@@ -82,3 +82,18 @@ vim.o.shiftwidth = 4 -- Number of spaces inserted when indenting
 
 vim.opt.laststatus = 3 -- Глобальная статусная строка
 vim.opt.cmdheight = 1 -- Высота командной строки
+
+vim.o.path = "**"
+-- vim.o.incsearch = false
+-- vim.o.hlsearch = false
+vim.o.termguicolors = true
+
+vim.cmd(":command! -nargs=+ Grep execute 'silent grep! <args>' | copen")
+
+vim.api.nvim_create_user_command('Comp', function(opts)
+    if opts.args and opts.args ~= '' then
+        vim.o.makeprg = opts.args
+    end
+    local cmd = vim.fn.shellescape(vim.o.makeprg)
+    vim.cmd('! ' .. cmd .. ' 2>&1 | sed "s/\\\\x1b\\\\[[0-9;]*[a-zA-Z]//g"') -- ansi filter
+end, { nargs = '*' })
